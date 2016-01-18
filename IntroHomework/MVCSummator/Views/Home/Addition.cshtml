@@ -1,0 +1,10 @@
+﻿@model MVCSummator.Models.AdditionViewModel
+
+@using (Html.BeginForm("Addition", "Home", FormMethod.Post))
+{
+    <h4>First number: @Html.TextBoxFor(x => x.FirstNumber, new { @Value = 0.0 })</h4>
+    <h4>Second number: @Html.TextBoxFor(x => x.SecondNumber, new { @Value = 0.0 })</h4>
+    <input type="submit" value="Submit"/>
+    <br />
+    <h3>Result: @Html.DisplayFor(x => x.Sum)</h3>
+}
